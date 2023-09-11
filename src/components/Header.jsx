@@ -28,7 +28,7 @@ const Header = () => {
                 className="p-1 block  font-sans text-base font-normal leading-normal text-black antialiased"
             >
                 <a href="#" className="flex items-center">
-                    Pages
+                    Products
                     <i className="material-icons">expand_more</i>
                 </a>
             </Typography>
@@ -38,7 +38,7 @@ const Header = () => {
                 className="p-1 block  font-sans text-base font-normal leading-normal text-black antialiased"
             >
                 <a href="#" className="flex items-center">
-                    Account
+                    Solutions
                     <i className="material-icons">expand_more</i>
                 </a>
             </Typography>
@@ -48,7 +48,7 @@ const Header = () => {
                 className="p-1 block  font-sans text-base font-normal leading-normal text-black antialiased"
             >
                 <a href="#" className="flex items-center">
-                    Blocks
+                    Pricing
                     <i className="material-icons">expand_more</i>
                 </a>
             </Typography>
@@ -58,8 +58,7 @@ const Header = () => {
                 className="p-1 block  font-sans text-base font-normal leading-normal text-black antialiased"
             >
                 <a href="#" className="flex items-center">
-                    Docs
-                    <i className="material-icons">expand_more</i>
+                    Blog
                 </a>
             </Typography>
         </ul>
