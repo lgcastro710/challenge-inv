@@ -111,7 +111,7 @@ const ModalSearch = ({ searchValue, onClose, setValue }) => {
             </div>
             <div className="max-w-[1380px] m-auto mb-10">
                 <h3 className="text-[#121a26] font-medium text-[24px] px-6">Hear Ticket Volume, our podcast of ITSM world</h3>
-                <div className="block lg:flex justify-between">
+                <div className="block lg:flex justify-start gap-24">
                     {cardsFiltered.map(card => (
                         <MyCard card={card} />
                     ))}
