@@ -1,0 +1,15 @@
+.header-style{
+    max-width: 1380px;
+    margin: 0 auto;
+}
+.prueba span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .header-style{
+        margin-top: 10px;
+    }
+}
