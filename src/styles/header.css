@@ -2,7 +2,7 @@
     max-width: 1380px;
     margin: 0 auto;
 }
-.prueba span{
+.flex-input span{
     display: flex;
     justify-content: center;
     align-items: center;

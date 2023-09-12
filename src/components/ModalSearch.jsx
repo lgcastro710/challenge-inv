@@ -63,7 +63,7 @@ const ModalSearch = ({ searchValue, onClose, setValue }) => {
 
     return (
         <div className="fixed z-50 top-[80px] px-5 pb-20 pt-12 lg:p-20 bg-[#fffffff2] w-full h-full overflow-auto left-0 right-0">
-            <div className="block lg:flex max-w-[1380px] m-auto lg:justify-center justify-start items-center w-auto h-auto prueba">
+            <div className="block lg:flex max-w-[1380px] m-auto lg:justify-center justify-start items-center w-auto h-auto flex-input">
                 <InputSearch
                     value={searchValue}
                     setValue={setValue}
