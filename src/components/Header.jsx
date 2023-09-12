@@ -21,7 +21,7 @@ const Header = () => {
     }, []);
 
     const navList = (
-        <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
+        <ul className="mb-4 mt-2 ml-5 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
             <Typography
                 as="li"
                 variant="small"
@@ -88,7 +88,7 @@ const Header = () => {
                 <Button variant="gradient" size="sm" className="hidden lg:block mb-2 mx-5 capitalize rounded-lg bg-gradient-to-tr from-[#08A1FF] to-[#08A1FF] py-2 my-0 px-4 font-sans text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                     <span>Subscribe</span>
                 </Button>
-                <i className="material-icons text-black hidden lg:flex ">language</i>
+                <i className="material-icons text-black hidden lg:flex cursor-pointer">language</i>
                 <IconButton
                     variant="text"
                     className="icon-mobile ml-auto h-6 w-6 text-black hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

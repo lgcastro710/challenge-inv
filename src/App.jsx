@@ -14,6 +14,19 @@ function App() {
   const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Asegurarse de restaurar el desplazamiento al desmontar el componente
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [showModal]);
+
+  useEffect(() => {
     defaultCategories.length && setShowModal(true)
   }, [defaultCategories])
 

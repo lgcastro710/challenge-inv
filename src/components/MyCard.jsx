@@ -42,7 +42,7 @@ export const MyCard = ({ card, setDefaultCategories }) => {
           {card.breadcrumbs}
         </Typography>
 
-        <Typography variant="h3" color="blue-gray" className="mb-2 text-[#121a26] font-medium text-[28px] flex items-start justify-between">
+        <Typography variant="h3" color="blue-gray" className="mb-2 text-[#121a26] cursor-pointer font-medium text-[28px] flex items-start justify-between">
           {card.titulo}
           <i className="material-icons rotate-180 text-[#418FDE] mt-2">transit_enterexit</i>
         </Typography>

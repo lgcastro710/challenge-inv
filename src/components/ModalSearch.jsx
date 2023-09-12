@@ -58,7 +58,6 @@ const ModalSearch = ({ searchValue, onClose, setValue, defaultCategories }) => {
     useEffect(() => {
         filterCards()
         filterPosts()
-        console.log(categoriesSelecte)
     }, [categoriesSelecte, searchValue])
 
 
@@ -78,18 +77,18 @@ const ModalSearch = ({ searchValue, onClose, setValue, defaultCategories }) => {
                     {CATEGORIES.map(category => (
                         <Chip
                             key={category.id}
-                            style={{ backgroundColor: categoriesSelecte?.includes(category.id) ? "#08A1FF" : category.color }}
+                            style={{ backgroundColor: categoriesSelecte?.includes(category.id) ? "#08A1FF" : category.bgColor }}
                             onClick={() => addCategoryFilter(category.id)}
                             value={
                                 <div className="flex justify-between items-center">
                                     <Typography
                                         variant="small"
-                                        className="font-medium capitalize leading-none text-white "
+                                        className="font-medium capitalize leading-none text-[#026AA2]"
                                     >
                                         {category.name}
                                     </Typography>
                                     <button onClick={() => removeCategoryFilter(category.id)} className="mx-2">
-                                        <i class="material-icons">
+                                        <i class="material-icons text-[#026AA2]">
                                             close
                                         </i>
                                     </button>
