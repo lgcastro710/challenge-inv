@@ -26,13 +26,12 @@ A curated list of awesome things related to <a href='https://github.com/vitejs/v
 # DEMO
 Ver github page: [https://lgcastro710.github.io/challenge-inv/](https://lgcastro710.github.io/challenge-inv/).
 
-## Libreria 
-```
-Library used
+## Library used
+
 - react and vite 
 - tailwingcss
 - tailwing-material
-```
+
 
 ## Project setup
 ```
