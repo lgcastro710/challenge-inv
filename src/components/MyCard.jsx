@@ -8,7 +8,7 @@ import {
   Chip,
 } from "@material-tailwind/react";
 
-export const MyCard = ({ card }) => {
+export const MyCard = ({ card, handleClick }) => {
 
   const getCategoriName = (id) => {
     const categorie = CATEGORIES.find(categorie => categorie.id === id)
@@ -41,17 +41,19 @@ export const MyCard = ({ card }) => {
       </CardBody>
       <CardFooter className="pt-2 flex">
         {card.catId.map(id => (
-          <Chip
-            value={
-              <Typography
-                variant="small"
-                className="font-medium capitalize leading-none text-[#256BA5]"
-              >
-                {getCategoriName(id)}
-              </Typography>
-            }
-            className="rounded-full w-fit py-1.5 bg-[#256ba529] mr-2"
-          />
+          <button onClick={handleClick}>
+            <Chip
+              value={
+                <Typography
+                  variant="small"
+                  className="font-medium capitalize leading-none text-[#256BA5]"
+                >
+                  {getCategoriName(id)}
+                </Typography>
+              }
+              className="rounded-full w-fit py-1.5 bg-[#256ba529] mr-2"
+            />
+          </button>
         ))}
       </CardFooter>
     </Card>
