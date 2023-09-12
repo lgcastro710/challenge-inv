@@ -8,7 +8,22 @@ import {
 } from "@material-tailwind/react";
 
 
-export const MyPost = ({ post, handleClick }) => {
+export const MyPost = ({ post, setDefaultCategories }) => {
+
+    const addCategories = (categoryId) => {
+        setDefaultCategories && setDefaultCategories([categoryId])
+    }
+
+    const getCategoriColor = (id) => {
+        const categorie = CATEGORIES.find(categorie => categorie.id === id)
+        return categorie.color
+    }
+
+    const getCategoriBgColor = (id) => {
+        const categorie = CATEGORIES.find(categorie => categorie.id === id)
+        return categorie.bgColor
+    }
+
 
     const getCategoriName = (id) => {
         const categorie = CATEGORIES.find(categorie => categorie.id === id)
@@ -39,11 +54,12 @@ export const MyPost = ({ post, handleClick }) => {
                 </Typography>
                 <div className="flex">
                     {post.catId.map(id => (
-                        <button onClick={handleClick}>
+                        <button onClick={() => addCategories(id)}>
                             <Chip
-
+                                style={{ backgroundColor: getCategoriBgColor(id) }}
                                 value={
                                     <Typography
+                                        style={{ color: getCategoriColor(id) }}
                                         variant="small"
                                         className="font-medium capitalize leading-none text-[#256BA5]"
                                     >

@@ -8,8 +8,21 @@ import {
   Chip,
 } from "@material-tailwind/react";
 
-export const MyCard = ({ card, handleClick }) => {
+export const MyCard = ({ card, setDefaultCategories }) => {
 
+  const addCategories = (categoryId) => {
+    console.log(setDefaultCategories)
+    setDefaultCategories && setDefaultCategories([categoryId])
+  }
+  const getCategoriColor = (id) => {
+    const categorie = CATEGORIES.find(categorie => categorie.id === id)
+    return categorie.color
+  }
+
+  const getCategoriBgColor = (id) => {
+    const categorie = CATEGORIES.find(categorie => categorie.id === id)
+    return categorie.bgColor
+  }
   const getCategoriName = (id) => {
     const categorie = CATEGORIES.find(categorie => categorie.id === id)
     return categorie.name
@@ -41,10 +54,12 @@ export const MyCard = ({ card, handleClick }) => {
       </CardBody>
       <CardFooter className="pt-2 flex">
         {card.catId.map(id => (
-          <button onClick={handleClick}>
+          <button onClick={() => addCategories(id)}>
             <Chip
+              style={{ backgroundColor: getCategoriBgColor(id) }}
               value={
                 <Typography
+                  style={{ color: getCategoriColor(id) }}
                   variant="small"
                   className="font-medium capitalize leading-none text-[#256BA5]"
                 >

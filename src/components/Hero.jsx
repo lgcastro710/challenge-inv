@@ -1,12 +1,9 @@
 import { hero } from "../assets/images";
-import { useState } from "react";
 import InputSearch from "./InputSearch";
-import ModalSearch from "./ModalSearch";
 
-const Hero = () => {
+const Hero = ({ setShowModal, value, setValue }) => {
 
-    const [value, setValue] = useState('')
-    const [showModal, setShowModal] = useState(false)
+
     return (
         <div className="bg-[#E4F2FF] mx-[30px] lg:mx-[50px] rounded-[15px]">
             <div className="lg:flex md:block max-w-[1380px] m-auto pt-24 lg:pt-20 lg:px-10 pb-10">
@@ -26,7 +23,7 @@ const Hero = () => {
                     </video>
                 </div>
             </div>
-            {showModal && <ModalSearch searchValue={value} setValue={setValue} onClose={setShowModal} />}
+
         </div>
     );
 }

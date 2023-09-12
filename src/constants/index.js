@@ -36,27 +36,32 @@ export const CATEGORIES = [
     {
         id: 1,
         name: "Design",
-        color: "#C11574"
+        color: "#C11574",
+        bgColor: "#FDF2FA"
     },
     {
         id: 2,
         name: "Research",
-        color: "#027A48"
+        color: "#3538CD",
+        bgColor: "#EEF4FF"
     },
     {
         id: 3,
         name: "Presentation",
-        color: "#026AA2"
+        color: "#009688",
+        bgColor: "#4caf504d"
     },
     {
         id: 4,
         name: "Leadership",
-        color: "#C4320A"
+        color: "#C4320A",
+        bgColor: "#FFF6ED"
     },
     {
         id: 5,
         name: "Management",
-        color: "#fcfc4b"
+        color: "#FF5722",
+        bgColor: "#fcfc4b6b"
     },
 ];
 

@@ -6,9 +6,9 @@ import InputSearch from "./InputSearch"
 import { useEffect, useState } from "react";
 import "./../styles/header.css"
 
-const ModalSearch = ({ searchValue, onClose, setValue }) => {
+const ModalSearch = ({ searchValue, onClose, setValue, defaultCategories }) => {
 
-    const [categoriesSelecte, setCategoriesSelecte] = useState([])
+    const [categoriesSelecte, setCategoriesSelecte] = useState(defaultCategories)
 
     const [cardsFiltered, setCardsFiltered] = useState([])
 
@@ -18,11 +18,11 @@ const ModalSearch = ({ searchValue, onClose, setValue }) => {
         const filterText = CARDS.filter((card) => card.titulo?.toLowerCase().includes(searchValue.toLowerCase()))
 
         const filtercategory = CARDS.filter(card =>
-            card.catId.some(categoria => categoriesSelecte.includes(categoria))
+            card.catId.some(categoria => categoriesSelecte?.includes(categoria))
         );
 
         const cards = filtercategory.length
-            ? filterText.filter(elemento => filtercategory.includes(elemento))
+            ? filterText.filter(elemento => filtercategory?.includes(elemento))
             : filterText
         setCardsFiltered(cards)
     }
@@ -30,18 +30,18 @@ const ModalSearch = ({ searchValue, onClose, setValue }) => {
         const filterText = POSTS.filter((post) => post.titulo?.toLowerCase().includes(searchValue.toLowerCase()))
 
         const filtercategory = POSTS.filter(post =>
-            post.catId.some(categoria => categoriesSelecte.includes(categoria))
+            post.catId.some(categoria => categoriesSelecte?.includes(categoria))
         );
 
         const posts = filtercategory.length
-            ? filterText.filter(elemento => filtercategory.includes(elemento))
+            ? filterText.filter(elemento => filtercategory?.includes(elemento))
             : filterText
         setPostsFiltered(posts)
     }
 
     const addCategoryFilter = (id) => {
         const categories = [...categoriesSelecte]
-        if (!categories.includes(id)) {
+        if (!categories?.includes(id)) {
             categories.push(id)
             setCategoriesSelecte(categories)
         }
@@ -58,6 +58,7 @@ const ModalSearch = ({ searchValue, onClose, setValue }) => {
     useEffect(() => {
         filterCards()
         filterPosts()
+        console.log(categoriesSelecte)
     }, [categoriesSelecte, searchValue])
 
 
@@ -77,13 +78,13 @@ const ModalSearch = ({ searchValue, onClose, setValue }) => {
                     {CATEGORIES.map(category => (
                         <Chip
                             key={category.id}
-                            style={{ backgroundColor: categoriesSelecte.includes(category.id) ? "#08A1FF" : "#256ba529" }}
+                            style={{ backgroundColor: categoriesSelecte?.includes(category.id) ? "#08A1FF" : category.color }}
                             onClick={() => addCategoryFilter(category.id)}
                             value={
                                 <div className="flex justify-between items-center">
                                     <Typography
                                         variant="small"
-                                        className="font-medium capitalize leading-none text-[#256BA5] "
+                                        className="font-medium capitalize leading-none text-white "
                                     >
                                         {category.name}
                                     </Typography>
