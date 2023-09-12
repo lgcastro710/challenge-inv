@@ -87,18 +87,18 @@ const ModalSearch = ({ searchValue, onClose, setValue, defaultCategories }) => {
                                     >
                                         {category.name}
                                     </Typography>
-                                    <button onClick={() => removeCategoryFilter(category.id)} className="mx-2">
-                                        {categoriesSelecte.includes(category.id) && <button onClick={() => removeCategoryFilter(category.id)} className="mx-2">
-                                            <i class="material-icons">
-                                                close
-                                            </i>
-                                        </button>
-                                        }
+
+                                    {categoriesSelecte.includes(category.id) && <button onClick={() => removeCategoryFilter(category.id)} className="ml-2">
+                                        <i class="material-icons">
+                                            close
+                                        </i>
                                     </button>
+                                    }
+
                                 </div>
 
                             }
-                            className="rounded-full flex w-fit h-8 pr-0 mb-3 lg:mb-0 bg-[#256ba529] mx-1 cursor-pointer"
+                            className="rounded-full flex w-fit h-8 mb-3 lg:mb-0 bg-[#256ba529] mx-1 cursor-pointer"
 
                         />
                     ))}
