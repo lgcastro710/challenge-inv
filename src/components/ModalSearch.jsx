@@ -88,9 +88,12 @@ const ModalSearch = ({ searchValue, onClose, setValue, defaultCategories }) => {
                                         {category.name}
                                     </Typography>
                                     <button onClick={() => removeCategoryFilter(category.id)} className="mx-2">
-                                        <i class="material-icons text-[#026AA2]">
-                                            close
-                                        </i>
+                                        {categoriesSelecte.includes(category.id) && <button onClick={() => removeCategoryFilter(category.id)} className="mx-2">
+                                            <i class="material-icons">
+                                                close
+                                            </i>
+                                        </button>
+                                        }
                                     </button>
                                 </div>
 
