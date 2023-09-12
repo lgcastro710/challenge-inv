@@ -3,7 +3,7 @@
 
 <p align="center">
   <br>
-  <img width="400" src="./assets/vite-react.jpg" alt="logo vite React">
+  <img width="400" src="./src/assets/vite-react.jpg" alt="logo vite React">
   <br>
   <br>
 </p>
