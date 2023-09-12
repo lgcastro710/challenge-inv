@@ -77,19 +77,21 @@ const ModalSearch = ({ searchValue, onClose, setValue, defaultCategories }) => {
                     {CATEGORIES.map(category => (
                         <Chip
                             key={category.id}
-                            style={{ backgroundColor: categoriesSelecte?.includes(category.id) ? "#08A1FF" : category.bgColor }}
+                            style={{ backgroundColor: categoriesSelecte?.includes(category.id) ? "#ec5d6f" : category.bgColor }}
                             onClick={() => addCategoryFilter(category.id)}
                             value={
                                 <div className="flex justify-between items-center">
+
                                     <Typography
+                                        style={{ color: categoriesSelecte?.includes(category.id) ? "#fff" : category.color }}
                                         variant="small"
                                         className="font-medium capitalize leading-none text-[#026AA2]"
                                     >
                                         {category.name}
                                     </Typography>
 
-                                    {categoriesSelecte.includes(category.id) && <button onClick={() => removeCategoryFilter(category.id)} className="ml-2">
-                                        <i class="material-icons">
+                                    {categoriesSelecte.includes(category.id) && <button onClick={() => removeCategoryFilter(category.id)} className="ml-2 flex">
+                                        <i class="material-icons text-[18px]">
                                             close
                                         </i>
                                     </button>
